@@ -1,0 +1,99 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+  
+  <div id="map" class="map"></div>
+
+  <!--Menu du filtrage-->
+  <div id="menu-filtrage" class="filtre">
+    <h2>Filtres</h2>
+    <input type="checkbox" id="checkboxCampus" name="checkboxCampus">
+    <label for="checkboxCampus">Campus</label><br>
+    <input type="checkbox" id="checkboxDescriptif" name="checkboxDescriptif" >
+    <label for="checkboxDescriptif">Descriptif</label><br>
+    <input type="checkbox" id="checkboxServices" name="checkboxServices" >
+    <label for="checkboxServices">Services</label><br>
+    <input type="checkbox" id="checkboxPublicsCibles" name="checkboxPublicsCibles" >
+    <label for="checkboxPublicsCibles">Publics cibles</label><br>
+    <div id="search-section" style="display: none;">
+      <input type="text" id="search-bar" placeholder="Search...">
+      <button id="search-submit">OK</button>
+    </div>
+  </div>
+
+
+  <!--popup services du PI-->
+  <div id="popup-services" class="ol-popup-services">
+    <a href="#" id="popup-close" class="ol-popup-close"></a>
+    <div id="popup-services-content"></div>
+    <button id="supprimer-point-button">Supprimer Point</button>
+    <button id="modifier-point-button">Modifier Pos</button>
+  </div>
+
+  <!--popup modif du PI-->
+  <div id="popup-modifPI" class="ol-popup-modifPI">
+    <a href="#" id="popupModif-close" class="ol-popup-close"></a>
+    <p class="popup-creerPI-titre">New position</p>
+    <div id="popup-modifPI-content"></div>
+    <button id="valider-modifPI-button">Valider</button>
+  </div>
+
+    <!--popup creer nouvel PI-->
+  <div id="popup-creerPI" class="ol-popup-creerPI">
+    <p class="popup-creerPI-titre">Creer un nouvel PI</p>
+    <div id="popup-creerPI-content">
+        <form id="creerPI-form">
+            <label for="nom-point">Nom Point:</label>
+            <input type="text" id="nom-point" name="nom_point" required><br>
+
+            <label for="composante">Composante:</label>
+            <input type="text" id="composante" name="composante" required><br>
+
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required><br>
+            <!--
+            <label for="id-campus">ID Campus:</label>
+            <input type="text" id="id-campus" name="id_campus" value="1" readonly required><br>
+            -->
+            <label for="campus-search">Campus:</label>
+            <input type="text" id="campus-search" name="campus_search" list="campus-list" required>
+            <datalist id="campus-list">
+            <!-- Options will be dynamically populated here -->
+            </datalist>
+
+
+
+            <label for="position">Position:</label>
+            <input type="text" id="position-lon" name="longitude" readonly>
+            <input type="text" id="position-lat" name="latitude" readonly><br>
+
+            <input type="button" id="confirmer-creerPI-button" value="Confirmer">
+            <input type="button" id="annuler-creerPI-button" value="Annuler">
+        </form>
+    </div>
+  </div>
+
+
+  <!--fenêtre à droite pour afficher les services-->
+  <div id="window-services" class="ol-window-services">
+    <div id="window-services-child" class="ol-window-services-child">
+      <h2>Services disponibles</h2>
+      <ul id="liste-services"></ul>
+      <div id="window-services-content"></div>
+  </div>
+  
+
+  
+
+
+  <script src="accueil.js"></script>
+  
+</body>

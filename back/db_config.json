@@ -1,0 +1,7 @@
+{
+  "user": "admin",
+  "host": "127.0.0.2",
+  "database": "bdd_points_interet",
+  "password": "1234",
+  "port": 5432
+}

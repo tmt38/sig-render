@@ -1,0 +1,217 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.ol-window-services {
+  position:fixed;
+  top:0;
+  bottom:0;
+  right:0;
+  width: 25em;
+  transform:translateX(100%);
+  transition: .3s ease-out;
+}
+
+.ol-window-services-child {
+  position:absolute;
+  background-color: #040438e7;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding: 1em;
+}
+.ol-window-services-child h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.ol-window-services-active {
+  transform: translateX(0%);
+}
+
+.ol-service-element {
+  position: absolute;
+  color: #fff;
+  background-color: #141330;
+  border: 1px solid #ccc;
+  left: 2px;
+  right:2px;
+  padding-left: 1em;
+  padding-top: 0em;
+  border-radius: 1em;
+}
+
+.ol-service-descriptif {
+  margin-left: 1em;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#window-services-content {
+  position: absolute;
+  color: #fff;
+  margin-left: 1em;
+}
+
+.filtre{
+  position:absolute;
+  background-color: #040438e7;
+  top:0;
+  left:0;
+  bottom: 0;
+  width: 17em;
+  color: #fff;
+}
+
+.filtre h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.filtre input[type="checkbox"] {
+  appearance: none;
+  background-color: #040438e7;
+  margin-left: 1em;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;;
+  border:0.15em solid currentColor;;
+  border-radius: 0.15em;
+  transform: translateY(0.3em);
+}
+
+.filtre input[type="checkbox"]:checked{
+  background-color: #fff;
+}
+
+.filtre input[type="text"] {
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  padding-left: 17em;
+}
+
+/*#menu-filtrage {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 250px;
+}
+
+#menu-filtrage label,
+#menu-filtrage input {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#menu-filtrage input {
+  margin-right: 5px;
+}*/
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+
+.ol-popup-services {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 100px;
+  box-shadow: 0 1px 4px rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+}
+.ol-popup-modifPI {
+  position: absolute;
+  background-color: rgb(120, 178, 233);
+  box-shadow: 0 1px 4px rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+}
+.ol-popup-creerPI {
+  position: absolute;
+  background-color: rgb(251, 190, 190);
+  box-shadow: 0 1px 4px rgba(214, 138, 138, 0.811);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+}
+.popup-service-titre {
+  font-size: 12px; 
+}
+
+.popup-creerPI-tire{
+  font-size: 12px;
+}
+
+.ol-popup-close::before {
+  font-size: 10px;
+  content: '✖';
+}
+.ol-popup-close {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  font-size: 18px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.ol-popup-close:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
